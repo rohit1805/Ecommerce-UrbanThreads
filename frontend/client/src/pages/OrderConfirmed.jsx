@@ -13,12 +13,16 @@ export function OrderConfirmed() {
   const emptyCart = async () => {
     try {
       // Make a request to the backend to empty the cart
-      await axios.post("http://localhost:3000/product/emptycart", null, {
-        headers: {
-          authorization: localStorage.getItem("token"),
-          "Content-Type": "Application/json",
-        },
-      });
+      await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/product/emptycart`,
+        null,
+        {
+          headers: {
+            authorization: localStorage.getItem("token"),
+            "Content-Type": "Application/json",
+          },
+        }
+      );
     } catch (error) {
       console.error("Error emptying cart:", error);
       // Handle error if necessary

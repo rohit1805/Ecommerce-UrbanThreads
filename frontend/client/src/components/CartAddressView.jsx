@@ -12,7 +12,7 @@ export function CartAddresstView({ setShippingAddressId, shippingAddressId }) {
 
   const getAddresses = async () => {
     const res = await axios.post(
-      "http://localhost:3000/user/showAddress",
+      `${import.meta.env.VITE_BASE_URL}/user/showAddress`,
       {},
       {
         headers: {

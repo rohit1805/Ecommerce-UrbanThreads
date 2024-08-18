@@ -59,7 +59,7 @@ export function AddProduct() {
   const addProduct = async () => {
     console.log("formData in addProduct:", formData);
     const res = await axios.post(
-      "http://localhost:3000/admin/addproduct",
+      `${import.meta.env.VITE_BASE_URL}/admin/addproduct`,
       formData,
       {
         headers: {

@@ -18,7 +18,7 @@ export function CategoryProducts({ category }) {
 
   const fetchProductData = async () => {
     const res = await axios.get(
-      `http://localhost:3000/product/${category}-clothing`
+      `${import.meta.env.VITE_BASE_URL}/product/${category}-clothing`
     );
     setAllProducts(res.data);
     console.log(res.data);
@@ -27,7 +27,7 @@ export function CategoryProducts({ category }) {
   // let likedProductIds = [];
   async function fetchLikedProductData() {
     const res = await axios.post(
-      "http://localhost:3000/user/showwishlist",
+      `${import.meta.env.VITE_BASE_URL}/user/showwishlist`,
       {},
       {
         headers: {

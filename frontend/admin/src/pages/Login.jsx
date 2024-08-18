@@ -9,10 +9,13 @@ export function Login() {
   const navigate = useNavigate();
 
   const login = async () => {
-    const res = await axios.post("http://localhost:3000/admin/login", {
-      email: email,
-      password: password,
-    });
+    const res = await axios.post(
+      `${import.meta.env.VITE_BASE_URL}/admin/login`,
+      {
+        email: email,
+        password: password,
+      }
+    );
 
     const token = `Bearer ${res.data.token}`;
     localStorage.setItem("token", token);

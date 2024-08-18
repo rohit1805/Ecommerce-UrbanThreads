@@ -1,0 +1,12 @@
+# POSTGRES SQL DATABASE URL
+
+DATABASE_URL="postgresql://urbaererf_owner:1cxCPofdfdl@ep-holy-meadow-a10dfo6.ap-southdfdeast-1.aws.neon.tech/dfdreadsDB?sslmode=require"
+
+
+# CLOUDINARY DETAILS
+CLOUD_NAME = 'dlbiw2343gnngf54uy5'
+CLOUDNARY_API_KEY= '593582fs386fddf34ddddd38443499'
+CLOUDNARY_API_SECRET= "vtqBeBbMsdf1TzTnbdfWvsdflmU7dssdgwNHx0"
+
+# JWT SECRET
+JWT_SECRET = "Secret@1234"

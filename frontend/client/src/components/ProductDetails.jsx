@@ -26,7 +26,7 @@ export function ProductDetails({ productData }) {
   async function addToWishlist() {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/addtowishlist",
+        `${import.meta.env.VITE_BASE_URL}/product/addtowishlist`,
         {
           productId: id,
         },
@@ -42,7 +42,7 @@ export function ProductDetails({ productData }) {
   async function removeFromWishlist() {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/removefromwishlist",
+        `${import.meta.env.VITE_BASE_URL}/product/removefromwishlist`,
         {
           productId: id,
         },
@@ -61,7 +61,7 @@ export function ProductDetails({ productData }) {
 
   const addToCart = async () => {
     const res = await axios.post(
-      "http://localhost:3000/product/addtocart",
+      `${import.meta.env.VITE_BASE_URL}/product/addtocart`,
       {
         productId: productData.id,
         quantity: quantity,

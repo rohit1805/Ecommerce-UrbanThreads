@@ -27,7 +27,7 @@ export function CartItems() {
 
   const fetchData = async () => {
     const res = await axios.post(
-      "http://localhost:3000/user/showcart",
+      `${import.meta.env.VITE_BASE_URL}/user/showcart`,
       {},
       {
         headers: {
@@ -55,7 +55,7 @@ export function CartItems() {
       "pk_test_51OwTyJSEDK3MA6iW1EiK0YMMoDMT0XdZVVcHNCMchUIaMlWNFCcWVHTChrf3llOlRIhIaRb9mVahGcg621EFBJgn00conswJOc"
     );
     const response = await axios.post(
-      "http://localhost:3000/user/create-checkout-session",
+      `${import.meta.env.VITE_BASE_URL}/user/create-checkout-session`,
       {
         cartItem,
       },
@@ -84,7 +84,7 @@ export function CartItems() {
   const confirmOrder = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/orderConfirmed",
+        `${import.meta.env.VITE_BASE_URL}/user/orderConfirmed`,
         {
           addressId: shippingAddressId,
           totalAmount: totalPrice,

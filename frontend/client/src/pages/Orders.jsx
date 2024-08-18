@@ -10,7 +10,7 @@ export function Orders() {
 
   const getOrders = async () => {
     const res = await axios.post(
-      "http://localhost:3000/user/orders",
+      `${import.meta.env.VITE_BASE_URL}/user/orders`,
       {},
       {
         headers: {

@@ -11,7 +11,7 @@ export function Wishlist() {
 
   const fetchData = async () => {
     const res = await axios.post(
-      "http://localhost:3000/user/showwishlist",
+      `${import.meta.env.VITE_BASE_URL}/user/showwishlist`,
       {},
       {
         headers: {

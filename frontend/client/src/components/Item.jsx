@@ -43,7 +43,7 @@ export function Item({
   async function addToWishlist() {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/addtowishlist",
+        `${import.meta.env.VITE_BASE_URL}/product/addtowishlist`,
         {
           productId: productId,
         },
@@ -59,7 +59,7 @@ export function Item({
   async function removeFromWishlist() {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/removefromwishlist",
+        `${import.meta.env.VITE_BASE_URL}/product/removefromwishlist`,
         {
           productId: productId,
         },

@@ -29,7 +29,7 @@ export function CartItem({
   const updateQuantity = async () => {
     console.log("updatedQuantity before call : ", itemQuantity);
     const res = await axios.put(
-      "http://localhost:3000/product/updateQuantity",
+      `${import.meta.env.VITE_BASE_URL}/product/updateQuantity`,
       {
         productId: productId,
         quantity: newQuantity,
@@ -49,7 +49,7 @@ export function CartItem({
 
   const removeFromCart = async () => {
     const res = await axios.post(
-      "http://localhost:3000/product/removefromcart",
+      `${import.meta.env.VITE_BASE_URL}/product/removefromcart`,
       {
         productId: productId,
       },

@@ -22,7 +22,7 @@ export function OrderCard({
   const cancelOrder = async () => {
     try {
       const res = await axios.put(
-        "http://localhost:3000/user/cancelOrder",
+        `${import.meta.env.VITE_BASE_URL}/user/cancelOrder`,
         {
           orderId: orderId,
         },

@@ -12,7 +12,7 @@ export function Product() {
     console.log("useEffect hit");
     const fetchData = async () => {
       const res = await axios.get(
-        `http://localhost:3000/product/allproducts/${productId}`
+        `${import.meta.env.VITE_BASE_URL}/product/allproducts/${productId}`
       );
       console.log("image fetched data : ", res.data);
       setProductData(res.data);

@@ -52,7 +52,7 @@ export function OrderCard({
         ? "Delivered"
         : "Unknown";
     const res = await axios.put(
-      "http://localhost:3000/admin/updateOrderStatus",
+      `${import.meta.env.VITE_BASE_URL}/admin/updateOrderStatus`,
       {
         orderId: orderId,
         status: newStatus,

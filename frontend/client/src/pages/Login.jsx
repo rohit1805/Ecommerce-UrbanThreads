@@ -140,8 +140,14 @@ export function Login() {
   const handleLogin = async () => {
     if (isFormValid) {
       try {
+        console.log(
+          "Login url : ",
+          `${import.meta.env.VITE_BASE_URL}/user/login`
+        );
+
         const res = await axios.post(
-          "http://localhost:3000/user/login",
+          // "http://localhost:3000/user/login",
+          `${import.meta.env.VITE_BASE_URL}/user/login`,
           {
             email,
             password,

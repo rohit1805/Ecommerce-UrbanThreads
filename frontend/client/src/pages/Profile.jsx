@@ -26,7 +26,7 @@ export function Profile() {
 
   const fetchUserDetails = async () => {
     const res = await axios.post(
-      "http://localhost:3000/user/profileInfo",
+      `${import.meta.env.VITE_BASE_URL}/user/profileInfo`,
       {},
       {
         headers: {
@@ -46,7 +46,7 @@ export function Profile() {
 
   const updateChanges = async () => {
     const res = await axios.put(
-      "http://localhost:3000/user/updateProfile",
+      `${import.meta.env.VITE_BASE_URL}/user/updateProfile`,
       {
         firstName: firstName,
         lastName: lastName,

@@ -14,7 +14,7 @@ export function WishlishItem({
   const removeFromWishlist = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/product/removefromwishlist",
+        `${import.meta.env.VITE_BASE_URL}/product/removefromwishlist`,
         {
           productId: productId,
         },

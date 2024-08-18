@@ -313,7 +313,8 @@ export function Signup() {
                   if (isFormValid) {
                     try {
                       const res = await axios.post(
-                        "http://localhost:3000/user/signup",
+                        `${import.meta.env.VITE_BASE_URL}/user/signup`,
+
                         {
                           email,
                           password,
