@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -21,6 +22,16 @@ export function Navbar() {
     //   " and is hovering : ",
     //   isHovering
     // );
+  };
+
+  useEffect(() => {
+    keepBackendUp();
+    setInterval(keepBackendUp, 180000);
+  }, []);
+
+  const keepBackendUp = async () => {
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}`);
+    console.log(res.data);
   };
 
   const handleMouseLeave = () => {

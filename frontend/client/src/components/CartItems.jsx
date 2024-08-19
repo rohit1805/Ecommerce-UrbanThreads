@@ -51,9 +51,7 @@ export function CartItems() {
   };
 
   const makePayment = async () => {
-    const stripe = await loadStripe(
-      "pk_test_51OwTyJSEDK3MA6iW1EiK0YMMoDMT0XdZVVcHNCMchUIaMlWNFCcWVHTChrf3llOlRIhIaRb9mVahGcg621EFBJgn00conswJOc"
-    );
+    const stripe = await loadStripe(import.meta.env.VITE_STRIPE_API_KEY);
     const response = await axios.post(
       `${import.meta.env.VITE_BASE_URL}/user/create-checkout-session`,
       {

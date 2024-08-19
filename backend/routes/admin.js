@@ -23,7 +23,7 @@ require("dotenv").config();
 //   api_secret: "vtqBeBbM1TzTnbWvlmU7dgwNHx0",
 // });
 
-console.log(" cloudnary api key : ", process.env.CLOUDNARY_API_KEY);
+// console.log(" cloudnary api key : ", process.env.CLOUDNARY_API_KEY);
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,

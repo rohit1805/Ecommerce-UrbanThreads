@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const NextArrow = (props) => {
   const { onClick } = props;
-  console.log("next arrow rendered");
+  // console.log("next arrow rendered");
   return (
     <div
       className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-transparent text-neutral-800 rounded-full p-2 z-10 cursor-pointer"
@@ -35,7 +35,7 @@ const NextArrow = (props) => {
 
 const PrevArrow = (props) => {
   const { onClick } = props;
-  console.log("prev arrow rendered");
+  // console.log("prev arrow rendered");
   return (
     <div
       className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-transparent text-neutral-800 rounded-full p-2 z-10 cursor-pointer"
